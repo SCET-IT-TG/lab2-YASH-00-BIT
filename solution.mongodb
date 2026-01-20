@@ -6,29 +6,29 @@ db.employees.insertMany([
   {
     name: "Yash",
     department: "IT",
-    salary: 100000,
+    salary: 110000,
     age: 25
   },
   {
-    name: "Heel",
+    name: "Manav",
     department: "HR",
-    salary: 50000,
+    salary: 52000,
     age: 24
   },
   {
     name: "Meet",
     department: "Sales",
-    salary: 45000,
+    salary: 43000,
     age: 25
   },
   {
     name: "Manan",
     department: "Marketing",
-    salary: 5000,
+    salary: 15000,
     age: 30
   },
   {
-    name: "Ranbir",
+    name: "Rahul",
     department: "Marketing",
     salary: 35000,
     age: 33
@@ -40,7 +40,7 @@ db.employees.insertMany([
 
 db.employees.find({ department: "IT" });
 
-db.employees.find({ name: "Ranbir" });
+db.employees.find({ name: "Rahul" });
 
 
 /*---Exercise 3: Formatting & Distinct---*/
@@ -77,3 +77,4 @@ db.employees.find({
 db.employees.find({
   salary: { $gte: 40000, $lte: 80000 }
 });
+
