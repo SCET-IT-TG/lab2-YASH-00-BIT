@@ -4,31 +4,31 @@ db = db.getSiblingDB("companyDB");
 
 db.employees.insertMany([
   {
-    name: "Manan",
+    name: "Yash",
     department: "IT",
     salary: 100000,
     age: 25
   },
   {
-    name: "Neel",
+    name: "Heel",
     department: "HR",
     salary: 50000,
     age: 24
   },
   {
-    name: "Deep",
+    name: "Meet",
     department: "Sales",
     salary: 45000,
     age: 25
   },
   {
-    name: "Manav",
+    name: "Manan",
     department: "Marketing",
     salary: 5000,
     age: 30
   },
   {
-    name: "Rahul",
+    name: "Ranbir",
     department: "Marketing",
     salary: 35000,
     age: 33
@@ -40,7 +40,7 @@ db.employees.insertMany([
 
 db.employees.find({ department: "IT" });
 
-db.employees.find({ name: "Rahul" });
+db.employees.find({ name: "Ranbir" });
 
 
 /*---Exercise 3: Formatting & Distinct---*/
