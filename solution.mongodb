@@ -6,25 +6,25 @@ db.employees.insertMany([
   {
     name: "Yash",
     department: "IT",
-    salary: 110000,
+    salary: 100000,
     age: 25
   },
   {
-    name: "Manav",
+    name: "Rajiv",
     department: "HR",
-    salary: 52000,
+    salary: 50000,
     age: 24
   },
   {
-    name: "Meet",
+    name: "Mit",
     department: "Sales",
-    salary: 43000,
+    salary: 45000,
     age: 25
   },
   {
-    name: "Manan",
+    name: "Meet",
     department: "Marketing",
-    salary: 15000,
+    salary: 5000,
     age: 30
   },
   {
@@ -36,5 +36,44 @@ db.employees.insertMany([
 ]);
 
 
+/*---Exercise 2: Simple Find Queries---*/
+
+db.employees.find({ department: "IT" });
+
+db.employees.find({ name: "Rahul" });
 
 
+/*---Exercise 3: Formatting & Distinct---*/
+
+db.employees.find().pretty();
+
+db.employees.distinct("department");
+
+
+/*---Exercise 4: Salary Analysis ($gt, $lt)---*/
+
+db.employees.find({ 
+  salary: { $gt: 50000 } 
+});
+
+db.employees.find({ 
+  salary: { $lt: 30000 } 
+});
+
+
+/*---Exercise 5: Age Filtering ($gte, $lte)---*/
+
+db.employees.find({ 
+  age: { $gte: 30 } 
+});
+
+db.employees.find({ 
+  age: { $lte: 25 } 
+});
+
+
+/*---Exercise 6: Range Queries---*/
+
+db.employees.find({
+  salary: { $gte: 40000, $lte: 80000 }
+});
